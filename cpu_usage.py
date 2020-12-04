@@ -3,15 +3,15 @@ import re
 
 def print_top():
 
-    top = subprocess.Popen('top -b -n 1 -w 512 | grep vhost', shell=True, stdout=subprocess.PIPE, universal_newlines=True)
+    top = subprocess.Popen('top -b -n 1 -w 512 | grep marci', shell=True, stdout=subprocess.PIPE, universal_newlines=True)
 
     top_comm = top.communicate()
     print(top_comm)
 
     # ensure correct float number parsing
-    # qemu_list = re.sub(',', '.', top.communicate()[0])
-    #qemu_list = re.sub(',', '.', top_comm[0])
-    #print(qemu_list)
+    #qemu_list = re.sub(',', '.', top.communicate()[0])
+    qemu_list = re.sub(',', '.', top_comm[0])
+    print(qemu_list)
 
 
 def print_top_1():
@@ -26,8 +26,9 @@ def print_top_1():
 
     splitted_array = re.split(',',splitted_top[0])
     for i in splitted_top:
-      print(splitted_array)
-
+      #print(splitted_array)
+      split = re.split('\s+',splitted_array[0])
+      print(split[9])
 
 
 
