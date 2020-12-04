@@ -22,7 +22,7 @@ def print_top_1():
     #print(top_comm)
     #print(splitted_top[0])
     #print(splitted_top[5])
-    print(splitted_top)
+    #print(splitted_top)
 
     splitted_array = re.split(',',splitted_top[0])
     for i in splitted_top:
