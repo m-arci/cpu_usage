@@ -24,8 +24,10 @@ def print_top_1():
     #print(splitted_top[5])
     print(splitted_top)
 
-#    splitted_array = splitted_top.split()
-#   print(splitted_array[8])
+    splitted_array = re.split(',',splitted_top[0])
+    for i in splitted_top:
+      print(splitted_array)
+
 
 
 
